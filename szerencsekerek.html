@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Fejérdy Samu">
+    <meta name="description" content="Grinnax Boltor labdarúgás csapat oldala">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./logok/Grinnax_Boltor.png" type="image/x-icon">
+    <title>Grinnax Boltor</title>
+</head>
+<body>
+    <div class="felirat">
+    <a href="index.html"><img src="./logok/Grinnax_Boltor.png" alt="grinnax boltor logó"></a>
+    <a href="nyeremenyjatek.html"><h1>Nyereményjáték</h1></a>
+    <a href=""><img src="./logok/adidas.png" alt="adidas logó"></a>
+    </div>
+    <div class="behuzas"><input type="button" name="porog" id="porgetes" value="Próbáljon szerencsét" onclick="porget()"></div>
+    <div class="szerencse">
+        <table>
+            <tr>
+                <td id="td1" class="nyert">W</td>
+                <td id="td2">L</td>
+                <td id="td3">L</td>
+                <td id="td4">L</td>
+            </tr>
+        </table>
+    </div>
+    <div class="behuzas" id="eredm"></div>
+    <div class="behuzas trans">
+        <input type="button" name="visszafo" value="Visssza a főoldalra" onclick="visszafooldal()"> 
+        <input type="button" name="visszash" value="Vissza a boltba" onclick="visszashop()">
+    </div>
+    <hr class="valaszto">
+    <div class="szponzorok">
+        <table>
+            <tr>
+                <td colspan="2"><a href="https://www.adidas.com/us" target="_blank"><img
+                            src="./logok/adidas.png" alt="adidas logó"></a></td>
+                <td colspan="2"><a href="https://www.hp.com/hu-hu/home.html" target="_blank"><img
+                            src="./logok/hp.png" alt="hp logó"></a></td>
+            </tr>
+            <tr>
+                <td><a href="https://www.ea.com/sports" target="_blank"><img src="./logok/easports.jpg"
+                            alt="ea sports logó"></a></td>
+                <td colspan="2"><a href="https://www.coca-cola.com/hu/hu" target="_blank"><img
+                            src="./logok/cocacola.png" alt="coca cola logó"></a></td>
+                <td><a href="https://dealer.porsche.com/hu/budapest/hu-HU?gad_source=1&gclid=CjwKCAiA9IC6BhA3EiwAsbltOJM3f22wMWgz107eSFMQ7UsPc1IAgQ6ssxM-SQwxkQzYlctFe7gh1hoCgXgQAvD_BwE&gclsrc=aw.ds"
+                        target="_blank"><img src="./logok/porsche.jpg" alt="porsche logó"></a></td>
+            </tr>
+            <tr>
+                <td colspan="2"><a href="https://www.nivea.hu" target="_blank"><img
+                            src="./logok/niveamen.png" alt="nivea men logó"></a></td>
+                <td colspan="2"><a href="https://open.spotify.com/" target="_blank"><img
+                            src="./logok/spotify.png" alt="spotify logó"></a></td>
+            </tr>
+        </table>
+    </div>
+    <hr>
+    <div class="footer">
+        <img src="./logok/Grinnax_Boltor.png" alt="grinnar boltor logó">
+        <p>A csapat kitalált, nem reprezentálja a valóságot<br>
+            &copy; Fejérdy Samu 2024 Corvinus</p>
+        <img src="./logok/adidas.png" alt="adidas logó">
+    </div>
+    <script src="javascript.js"></script>
+</body>
+</html>

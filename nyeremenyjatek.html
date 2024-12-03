@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Fejérdy Samu">
+    <meta name="description" content="Grinnax Boltor labdarúgás csapat oldala">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./logok/Grinnax_Boltor.png" type="image/x-icon">
+    <title>Grinnax Boltor</title>
+</head>
+<body>
+    <div class="felirat">
+    <a href="index.html"><img src="./logok/Grinnax_Boltor.png" alt="grinnax boltor logó"></a>
+    <a href="nyeremenyjatek.html"><h1>Nyereményjáték</h1></a>
+    <a href=""><img src="./logok/adidas.png" alt="adidas logó"></a>
+    </div>
+    <div class="article">
+        <div class="nyjatek aktiv" id="nyjatekszoveg">Most itt a lehetőség, hogy öné legyen egy Grinnax Boltor focimez! 🟠⚪ Mutassa ki a rajongását, és támogassa a kedvenc csapatát stílusosan. Nincs más dolga, mint kitölteni a tesztet és legalább 7 kérdésre jól válaszolni, és esélyt kap, hogy megnyerje ezt az ajándékot. Ne hagyja ki, a győztes talán épp ÖN lesz!
+        </div>
+        <div class="kerdesek">
+                <div class="kerdes aktiv" id="kerdes1">
+                    <h3>Hogy szól a csapat indulójának az első két szava? (Az "és" szót tegye közéjük, de ne vegye figyelembe)</h3>
+                    <input type="text" name="indulo" id="kerd1">
+                    <div class="vege">
+                        <input type="button" name="kovetkezo" value="Következő" onclick="kovetkezo(1)">
+                    </div>
+                </div>
+                <div class="kerdes" id="kerdes2">
+                    <h3>Hányadik helyen végzett tavaly a csapat a bajnokságban?</h3>
+                    <input type="range" min="1" max="6" value="1" name="helyezes" id="kerd2" oninput="ertek(document.getElementById(`kerd2`).value)">
+                    <span id="helyez">1</span>
+                    <div class="vege">
+                        <input type="button" name="kovetkezo" value="Következő" onclick="kovetkezo(2)">
+                    </div>
+                </div>
+                <div class="kerdes" id="kerdes3">
+                    <h3>Mikor igazolt le hozzánk Elian Torres?</h3>
+                    <input type="date" name="datum" id="kerd3">
+                    <div class="vege">
+                        <input type="button" name="kovetkezo" value="Következő" onclick="kovetkezo(3)">
+                    </div>
+                </div>
+                <div class="kerdes" id="kerdes4">
+                    <h3>Melyik évben alapították a klubbot?</h3>
+                    <select name="ev" id="kerd4" size="4">
+                        <option value="1970">1970</option>
+                        <option value="1975">1975</option>
+                        <option value="1980">1980</option>
+                        <option value="1985">1985</option>
+                    </select>
+                    <div class="vege">
+                        <input type="button" name="kovetkezo" value="Következő" onclick="kovetkezo(4)">
+                    </div>
+                </div>
+                <div class="kerdes" id="kerdes5">
+                    <h3>Mi a Grinnax Boltor hivatalos csapat színe?</h3>
+                    <label><input type="radio" name="szin" id="feher">Fehér és arany</label>
+                    <label><input type="radio" name="szin" id="bezs">Bézs és narancs</label>
+                    <label><input type="radio" name="szin" id="piros">Piros és sárga</label>
+                    <div class="vege">
+                        <input type="button" name="kovetkezo" value="Következő" onclick="kovetkezo(5)">
+                    </div>
+                </div>
+                <div class="kerdes" id="kerdes6">
+                    <h3>Miket lehet a boltunkban vásárolni?</h3>
+                    <label><input type="checkbox" name="sapka" id="sap">Sapka</label>
+                    <label><input type="checkbox" name="kabat" id="kab">Kabát</label>
+                    <label><input type="checkbox" name="s" id="sal">Sál</label>
+                    <label><input type="checkbox" name="kulacs" id="ku">Kulacs</label>
+                    <div class="vege">
+                        <input type="button" name="kovetkezo" value="Következő" onclick="kovetkezo(6)">
+                    </div>
+                </div>
+                <div class="kerdes" id="kerdes7">
+                    <h3>Hány szponzora van a klubbnak?</h3>
+                    <input type="number" name="szponzorszam" id="kerd7" max="10" min="1">
+                    <div class="vege">
+                        <input type="button" name="kovetkezo" value="Következő" onclick="kovetkezo(7)">
+                    </div>
+                </div>
+                <div class="kerdes" id="kerdes8">
+                    <h3>Ki a klubb főszponzora?</h3>
+                    <input type="text" name="szponzorszam" id="kerd8">
+                    <div class="vege">
+                        <input type="button" name="kovetkezo" value="Következő" onclick="kovetkezo(8)">
+                    </div>
+                </div>
+                <div class="kerdes kuldes" id="kerdes9">
+                    <h3 id="kitoltes">Köszönjük a kitöltést :D</h3>
+                    <div class="vege">
+                        <input type="button" name="kuldes" id="kuld" value="Válaszok elküldése" onclick="elkuld()">
+                    </div>
+                </div>
+        </div>
+        <div class="behuzas trans">
+            <input type="button" name="visszafo" value="Visssza a főoldalra" onclick="visszafooldal()"> 
+            <input type="button" name="visszash" value="Vissza a boltba" onclick="visszashop()">
+        </div>
+    </div>
+    <hr class="valaszto">
+    <div class="szponzorok">
+        <table>
+            <tr>
+                <td colspan="2"><a href="https://www.adidas.com/us" target="_blank"><img
+                            src="./logok/adidas.png" alt="adidas logó"></a></td>
+                <td colspan="2"><a href="https://www.hp.com/hu-hu/home.html" target="_blank"><img
+                            src="./logok/hp.png" alt="hp logó"></a></td>
+            </tr>
+            <tr>
+                <td><a href="https://www.ea.com/sports" target="_blank"><img src="./logok/easports.jpg"
+                            alt="ea sports logó"></a></td>
+                <td colspan="2"><a href="https://www.coca-cola.com/hu/hu" target="_blank"><img
+                            src="./logok/cocacola.png" alt="coca cola logó"></a></td>
+                <td><a href="https://dealer.porsche.com/hu/budapest/hu-HU?gad_source=1&gclid=CjwKCAiA9IC6BhA3EiwAsbltOJM3f22wMWgz107eSFMQ7UsPc1IAgQ6ssxM-SQwxkQzYlctFe7gh1hoCgXgQAvD_BwE&gclsrc=aw.ds"
+                        target="_blank"><img src="./logok/porsche.jpg" alt="porsche logó"></a></td>
+            </tr>
+            <tr>
+                <td colspan="2"><a href="https://www.nivea.hu" target="_blank"><img
+                            src="./logok/niveamen.png" alt="nivea men logó"></a></td>
+                <td colspan="2"><a href="https://open.spotify.com/" target="_blank"><img
+                            src="./logok/spotify.png" alt="spotify logó"></a></td>
+            </tr>
+        </table>
+    </div>
+    <hr>
+    <div class="footer">
+        <img src="./logok/Grinnax_Boltor.png" alt="grinnar boltor logó">
+        <p>A csapat kitalált, nem reprezentálja a valóságot<br>
+            &copy; Fejérdy Samu 2024 Corvinus</p>
+        <img src="./logok/adidas.png" alt="adidas logó">
+    </div>
+    <script src="javascript.js"></script>
+</body>
+</html>

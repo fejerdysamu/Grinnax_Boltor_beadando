@@ -1,0 +1,593 @@
+
+* {
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    padding: 0px;
+    margin: 0px;
+    font-family: 'myfamily';
+    font-weight: bold;
+    background-color: #d9ccab;
+} 
+@font-face {
+    font-family: 'myfamily';
+    src: url("CormorantGaramond-Regular.ttf");
+}
+div{
+    display: flex;
+    flex-wrap: wrap;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+/*menü*/
+.header{
+    background-color: #e1cca7;
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+.header .menupont{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 2px solid #F3A620;
+    border-radius: 30px;
+    font-size: 200%;
+    width: 50%;
+    text-decoration: none;
+    color: orange;
+}
+
+img{
+    height: 200px;
+    width: auto;
+}
+.header img{
+    height: auto;
+    width: 70px;
+}
+
+
+.header .active{
+    background-color: #F3A620;
+    color: black;
+    transform: scale(1.1);
+    
+}
+.header .menupont:hover{
+    background-color: #F3A620; 
+    color: black;
+    transform: scale(1.1);
+    transition: 1s;
+}
+/*fooldal*/
+.felirat{
+    border: 3px solid black;
+    background-color: #c96d21; 
+    justify-content: space-evenly;
+    align-items: center;
+}
+.hirek1{
+    flex-wrap: wrap;
+    margin-left: 80px;
+    margin-right: 80px;
+    justify-content: center;
+    text-align: center;
+}
+.hirek2{
+   
+    flex-wrap: wrap;
+    margin-left: 80px;
+    margin-right: 80px;
+    justify-content: center;
+    text-align: center;
+}
+.hir{
+    justify-content: center;
+}
+
+.idopont{
+    margin-bottom: 4px;
+    margin-right: 85px;
+    margin-left: 85px;
+}
+.hirimg{
+    border: 3px solid black;
+    border-radius: 30px;
+    margin-top: 6px;
+}
+
+
+.hirimg:hover{
+    transform: scale(1.1);
+    transition: 1.5s;
+
+}
+
+.naptar{
+    height: 14px;
+}
+
+hr{
+    height: 3px;
+}
+.valaszto{
+    width: 67%;
+    background-color: #F3A620;
+    border-color: #F3A620;
+}
+.szponzorok{
+    margin: 20px 20px 0 20px;
+    justify-content: center;
+}
+dt{
+    border-top: 3px solid black;
+    margin-top: 70px;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+.article{
+    margin: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+table{
+    text-align: center;
+}
+td img{
+    height: 70px;
+    width: auto;
+}
+/*lábléc*/
+.footer{
+    justify-content: space-between;
+}
+.footer img{
+    height: 70px;
+    width: auto;
+}
+.footer p{
+    text-align: center;
+}
+
+/*rolunk*/
+
+.csapatkep{
+    width: 80%;
+    height: auto;
+    margin-top: 30px;
+}
+.kozep{
+    justify-content: center;
+}
+.container>* {
+    height: fit-content;
+}
+.container{
+    display: flex;
+    justify-content: center;
+}
+.szoveg{
+    margin: 40px;
+    line-height: 25px;
+
+}
+.aside{
+    justify-content: center;
+    margin: 40px;
+}
+.hatter{
+    display: none;
+    text-align: center;
+}
+.aside input{
+    border: none;
+    background-color: #d9ccab;
+    cursor: pointer;
+}
+.hatter .aktiv{
+    display: block;
+}
+.hatter{
+        border: 3px solid black;
+        border-radius: 40px;
+        padding: 20px;
+        background-color: #F3A620;
+}
+.himnusz{
+    width: 400px;
+    height: auto;
+    
+}
+.kitolt{
+    display: none;
+}
+/*merkozesek*/
+
+.article td{
+    padding: 10px;
+    font-size: 20px;
+}
+
+.article tr{
+    background-color: #F3A620;
+    margin: 0;
+}
+.article tr:nth-child(2n){
+    background-color: #e1cca7;
+}
+
+.article table{
+    display: none;
+    border: 1px solid black;
+    background-color: black;
+}
+.article table.aktiv{
+    display: block;
+}
+.normal{
+    font-weight: normal;
+}
+.article td img{
+    height: 35px;
+    width: auto;
+}
+.event{
+    border: 3px solid black;
+    border-radius: 40px;
+    flex-basis: 100%;
+    justify-content: center;
+    background-color: #c96d21;
+    margin: 20px;
+}
+.rendez{
+    justify-content: space-around;
+}
+.events1 p{
+    padding-left: 20px;
+}
+/*shop*/
+
+.nyerjatek input{
+    height: 55px;
+    width: 300px;
+    font-size: 40px;
+    color: red;
+    border: 3px solid red;
+    margin-top: 30px;
+    cursor: pointer;
+}
+.slider {
+    width: 90%;
+    min-width: 400px;
+    margin: 30px auto;
+    }
+.slick-slide {margin: 0px 5px;}
+.slick-slide img {width: 65%;}
+.slick-prev:before, .slick-next:before {
+    color: white;
+    }
+.slick-slide {
+    transition: all ease-in-out .3s;
+    opacity: 1;
+    }
+.slick-active { opacity: 1;
+    }
+.slick-current { opacity: 1; }
+.slick-list{
+    margin-left: 25%;
+}
+.shop{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
+}
+.fotoalbum{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; 
+}
+
+.reszletek{
+    justify-content: center;
+    align-items: center;
+}
+.shop img{
+    border-radius: 40px;
+}
+
+.shop img:hover{
+    border: 3px solid black;
+}
+
+.legend{
+    margin-top: 50px;
+    font-size: 1.2em;
+    
+}
+.behuzas{
+    width: 97%;
+    justify-content: center;
+    margin: 5px 15px;
+}
+.blokk{
+    width: 100%;
+}
+.kosar{
+    margin-top: 5px;
+    border: 3px solid #c96d21;
+    border-radius: 30px;
+    background-color: #e1cca7;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.kosar:hover{
+    background-color: #c96d21;
+    transition: 0.5s;
+}
+
+.adatok{
+    margin: 10px;
+}
+.article h2{
+    font-size: 40px;
+}
+input{
+    border: 2px solid #c96d21;
+    border-radius: 40px;
+}
+#vasar{
+    margin-top: 30px;
+    padding: 10px;
+    font-size: 45px;
+    cursor: pointer;
+}
+#vasar:hover{
+    background-color: #c96d21;
+    transition: 1s;
+}
+label.error{
+    color: #c96d21;
+}
+/*Nyereményjáték*/
+.felirat img{
+    height: 80px;
+    width: auto;
+}
+.nyjatek{
+    margin: 30px;
+    line-height: 25px;
+    font-size: 20px;
+    flex-basis:60%;
+    display: none;
+}
+.nyjatek .aktiv{
+    display: block;
+}
+.kerdesek{
+    padding: 20px 5px 5px 20px;
+    width: 67%;
+    height: auto;
+    border: 3px solid black;
+    border-radius: 40px;
+    justify-content: center;
+    background-color: #c96d21;
+    color: white;
+}
+.vege{
+    width: 90%;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+.kerdesek input{
+    height: 35px;
+    width: 68%;
+    text-align: center;
+    font-size: 20px;
+}
+.vege input{
+    border: 3px solid black;
+    width: 110px;
+    box-shadow: 5px 5px 3px black;
+    cursor: pointer;
+}
+#kuld{
+    border: 3px solid black;
+    width: 280px;
+    box-shadow: 5px 5px 3px black;
+    cursor: pointer;
+}
+.kerdes{
+    display: none;
+    padding-right: 0;
+    height: 240px;
+}
+.kuldes{
+    height: 150px;
+}
+.kerdes h3{
+    text-align: center;
+}
+#kerd4{
+    width: 67%;
+    text-align: center;
+}
+#kerdes5{
+    height: 300px;
+}
+#kerdes6 .vege input{
+    height: 40px;
+}
+#kerdes6{
+    height: 240px;
+}
+#kerdes6 label{
+    font-size: 20px;
+}
+#kerdes6 input{
+    height: 20px;
+}
+#feher, #piros, #bezs{
+    width: 20px;
+}
+#kerdes7, #kerdes8{
+    height: 175px;
+}
+.aktiv{
+    display: block;
+}
+.trans{
+    justify-content: space-around;
+}
+.trans input{
+    cursor: pointer;
+    font-size: 25px;
+    margin-top: 20px;
+}
+.trans input:hover{
+    background-color: #c96d21;
+    transition: 1s;
+}
+
+/*szerencskerek*/
+.szerencse{
+    justify-content: center;
+    margin: 40px;
+}
+.szerencse td{
+    padding: 30px;
+    border: 3px solid black;
+}
+#porgetes{
+    background-color: #d9ccab;
+    border: none;
+    font-size: 45px;
+    margin-top: 40px;
+    cursor: pointer;
+}
+
+#eredm{
+    font-size: 35px;
+    border: 1px solid #d9ccab;
+}
+@media only screen and (min-width: 600px) {
+    .header{
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        font-size: 10px;
+    }
+    .header .menupont{
+        width: 18%;
+    }
+    .rendez{
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    
+    .shop{
+        flex-wrap: wrap;
+    }
+    .shop img{
+        width: 300px;
+        height: auto;
+    }
+    .blokk{
+        width:100%;
+        justify-content: center;
+    }
+    .kerdes{
+        font-size: 20px;
+        height: 260px;
+    }
+    #kerdes6{
+        height: 300px;
+    }
+    #kerdes7, #kerdes8{
+        height: 200px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .header{
+        font-size: 13px;
+    }
+    .hirek1{
+        flex-wrap: nowrap;
+    }
+    .hirek2{
+        flex-wrap: nowrap;
+    }
+    .hir{
+        margin: 10px;
+    }
+    .rendez{
+        flex-direction: row;
+    }
+    .kozepre{
+        justify-content: space-around;
+    }
+    .shop img{
+        height:250px;
+        width: auto;
+    }
+    .fotoalbum{
+        width: 33%;
+    }
+    .slick-list{
+        margin-left: 17%;
+    }
+    .blokk{
+        width: 50%;
+        justify-content: center;
+    }
+    .shop{
+        width: 100%;
+    }
+    .kerdes{
+        font-size: 28px;
+    }
+    .article td{
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+    .event{
+        flex-basis: 40%;
+    }
+    #kerdes6{
+        height: 340px;
+    }
+    
+}
+@media only screen and (min-width: 850px) {
+    .container{
+        flex-wrap: wrap;
+    }
+    .szoveg{
+        flex-basis: 40%;
+        margin-right: 10px;
+    }
+    .aside{
+        flex-basis: 30%;
+    }
+    .himn{
+        flex-basis: 40%;
+    }
+    .kitolt{
+        display: block;
+    }
+}

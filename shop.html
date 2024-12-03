@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Fejérdy Samu">
+    <meta name="description" content="Grinnax Boltor labdarúgás csapat oldala">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./logok/Grinnax_Boltor.png" type="image/x-icon">
+    <link rel="stylesheet" href="slick-1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="slick-1.8.1/slick/slick-theme.css">
+    <title>Grinnax Boltor</title>
+</head>
+
+<body onload="ny()">
+    <a id="teto"></a>
+    <div>
+        <div class="header">
+            <a href="index.html"><img src="./logok/Grinnax_Boltor.png" alt="grinnax boltor logó"></a>
+            <a href="index.html" class="menupont">Főoldal</a>
+            <a href="rolunk.html" class="menupont">Rólunk</a>
+            <a href="merkozesek.html" class="menupont">Mérkőzések</a>
+            <a href="#" class="menupont active">Bolt</a>
+            <a href="https://www.adidas.com/us" target="_blank"><img src="./logok/adidas.png" alt="adidas logó" class="adidas"></a>
+        </div>
+    </div>
+    <div class="felirat">
+        <h1>Shop</h1>
+    </div>
+    <div class="behuzas nyerjatek">
+        <input type="button" id="nyjid" value="Nyereményjáték!!! " onclick="atvisz()">
+    </div>
+
+    <div class="shop">
+        <div class="blokk">
+            <div class="fotoalbum">
+                <div class="behuzas">
+                    <div class="legend">Hazai mez</div>
+                </div>
+                <section class="center slider">
+                    <div>
+                        <a href="./mezek/mez1amod.png" target="_blank"><img src="./mezek/mez1amod.png"
+                        alt="Hazai mez előlről és hátulról" title="Hazai mez előlről és hátulról"></a>
+                    </div>
+                    <div>
+                        <a href="./mezek/mez1bmod.png" target="_blank"><img src="./mezek/mez1bmod.png" alt="Hazai mez előlről"
+                        title="Hazai mez előlről"></a>
+                    </div>
+                    <div>
+                        <a href="./mezek/mez1c.png" target="_blank"><img src="./mezek/mez1c.png" alt="Hazai mez hátulról"
+                        title="Hazai mez hátulról"></a>
+                    </div>
+                </section>
+            </div>
+            <div class="reszletek">
+                <div class="behuzas">Ár: 20000Ft/db (max 10db)</div>
+                <div class="behuzas">
+
+                    <input type="button" value="-" name="minusz" onclick="csokkent(1)">
+                    <input type="text" name="sz" id="number1" size="1" value="0">
+                    <input type="button" value="+" name="plusz" onclick="novel(1)">
+                </div>
+                <div class="behuzas"> Méret (EU): 
+                    <select name="myselection">
+                        <option value="S">S</option>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                        <option value="XL">XL</option>
+                    </select>
+                </div>
+                <div class="behuzas">
+                    <input type="button" value="Kosárba" class="kosar" onclick="betesz()">
+                </div>
+            </div>
+        </div>
+        <div class="blokk">
+            <div class="fotoalbum jobbmargo">
+                <div class="behuzas">
+                    <div class="legend">Kapus mez</div>
+                </div>
+                <section class="center slider">
+                    <div>
+                        <a href="./mezek/kapusmezamod.png" target="_blank"><img src="./mezek/kapusmezamod.png"
+                        alt="Kapus mez előlről és hátulról" title="Kapus mez előlről és hátulról"></a>
+                    </div>
+                    <div>
+                        <a href="./mezek/kapusmezb.png" target="_blank"><img src="./mezek/kapusmezb.png"
+                        alt="Kapus mez hátulról" title="Kapus mez hátulról"></a>
+                    </div>
+                </section>
+            </div>
+            <div class="reszletek">
+                <div class="behuzas">Ár: 25000Ft/db (max 10db)</div>
+                <div class="behuzas">
+                    <input type="button" value="-" name="min" onclick="csokkent(2)">
+                    <input type="text" name="num" id="number2" size="1" value="0">
+                    <input type="button" value="+" name="plu" onclick="novel(2)">
+                </div>
+                <div class="behuzas"> Méret (EU): 
+                    <select name="myselection">
+                        <option value="S">S</option>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                        <option value="XL">XL</option>
+                    </select>
+                </div>
+                <div class="behuzas">
+                    <input type="button" value="Kosárba" class="kosar" onclick="betesz()">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="shop">
+        <div class="blokk">
+            <div class="behuzas">
+                <div class="legend">Kulacs</div>
+            </div>
+            <div class="fotoalbum">
+                <a href="./egyebtargyak/kulacs.png" target="_blank">
+                    <img src="./egyebtargyak/kulacs.png" alt="kulacs"></a>
+            </div>
+            <div class="reszletek">
+                <div class="behuzas">Ár: 4000Ft/db (max 10db)</div>
+                <div class="behuzas">
+                    <input type="button" value="-" name="min3" onclick="csokkent(3)">
+                    <input type="text" name="num3" id="number3" size="1" value="0">
+                    <input type="button" value="+" name="plu3" onclick="novel(3)">
+                </div>
+                <div class="behuzas">
+                    Kupak színe: <input type="color" name="szin">
+                </div>
+                <div class="behuzas">
+                    <input type="button" value="Kosárba" class="kosar" onclick="betesz()">
+                </div>
+            </div>
+        </div>
+        <div class="blokk">
+            <div class="behuzas">
+                <div class="legend">Sapka</div>
+            </div>
+            <div class="fotoalbum">
+                <a href="./egyebtargyak/sapka.png" target="_blank">
+                    <img src="./egyebtargyak/sapka.png" alt="sapka"></a>
+            </div>
+            <div class="reszletek">
+                <div class="behuzas">Ár: 10000Ft/db (max 10db)</div>
+                <div class="behuzas">
+                    <input type="button" value="-" name="min4" onclick="csokkent(4)">
+                    <input type="text" name="num4" id="number4" size="1" value="0">
+                    <input type="button" value="+" name="plu4" onclick="novel(4)">
+                </div>
+                <div class="behuzas"> Méret (EU): 
+                    <select name="myselection">
+                        <option value="S">S</option>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                        <option value="XL">XL</option>
+                    </select>
+                </div>
+                <div class="behuzas">
+                    <input type="button" value="Kosárba" class="kosar" onclick="betesz()">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr class="valaszto">
+    <div class="article">
+            <div class="behuzas">
+                <h2>Kosár tartalma</h2>
+            </div>
+            <div id="tartalom" class="behuzas">
+                <div class="behuzas">Hazai mez: 0 db</div>
+                <div class="behuzas">Kapus mez: 0 db</div>
+                <div class="behuzas">Kulacs: 0 db</div>
+                <div class="behuzas">Sapka: 0 db</div>
+                <div class="behuzas">Teljes összeg: 0 Ft</div>
+            </div>
+            <hr class="valaszto">
+            <div class="behuzas">
+                <h2>Adatok</h2>
+            </div>
+            <form action="https://rf.uni-corvinus.hu/webfejlesztes/receive.php" id="vasarlasform" novalidate>
+                <div class="adatok">
+                    <label for="nev">Név: </label><input type="text" size="32" name="nev" id="nev">
+                </div>
+                <div class="adatok">
+                    <label for="email">E-mail: </label><input type="email" size="30" name="email"
+                            placeholder="grinnax.boltor@gmail.com" id="email">
+                </div>
+                <div class="adatok">
+                    <label for="jelszo">Jelszó: </label><input type="password" size="30" name="jelszo" id="jelszo">
+                </div>
+                <div class="adatok">
+                    <label for="telszam">Telefonszám: </label><input type="tel" size="25" name="telszam" placeholder="+36" id="telszam">
+                </div>
+                <div class="adatok">
+                    <label for="checkbox">Elfogadja a vásárlási feltételeket? &nbsp;</label>
+                    <input type="checkbox" name="checkbox" id="checkbox">
+                </div>
+                <div class="adatok">
+                    Feliratkozik a hírlevelünkre? &nbsp;
+                    <label for="radio">Igen </label><input type="radio"  name="rad" id="radio" value="igen"><br>
+                    <label for="radi">&nbsp;&nbsp;Nem </label><input type="radio"  name="rad" id="radi" value="nem">
+                </div>
+                <div class="behuzas">
+                    <h2>Szállítási cím</h2>
+                </div>
+                <div class="adatok">
+                    <label for="irszam">Iránítószám: </label><input type="text" size="15" name="irszam" id="irszam">
+                </div>
+                <div class="adatok">
+                    <label for="varos">Város: </label><input type="text" size="21" name="varos" id="varos">
+                </div>
+                <div class="adatok">
+                    <label for="kozter">Közterület: </label><input type="text" size="16" name="kozter" id="kozter">
+                </div>
+                <div class="adatok">
+                    <label for="hsz">Házszám: </label><input type="text" size="17" name="hsz" id="hsz">
+                </div>
+                <div class="behuzas">
+                    <input type="submit" name="vasarlas" value="Tovább a fizetéshez" id="vasar">
+                </div>
+            </form>
+            
+    </div>
+    <div class="behuzas"><a href="#teto">Vissza a tetejére</a></div>
+    <hr class="valaszto">
+    <div class="szponzorok">
+        <table>
+            <tr>
+                <td colspan="2"><a href="https://www.adidas.com/us" target="_blank"><img
+                            src="./logok/adidas.png" alt="adidas logó"></a></td>
+                <td colspan="2"><a href="https://www.hp.com/hu-hu/home.html" target="_blank"><img
+                            src="./logok/hp.png" alt="hp logó"></a></td>
+            </tr>
+            <tr>
+                <td><a href="https://www.ea.com/sports" target="_blank"><img src="./logok/easports.jpg"
+                            alt="ea sports logó"></a></td>
+                <td colspan="2"><a href="https://www.coca-cola.com/hu/hu" target="_blank"><img
+                            src="./logok/cocacola.png" alt="coca cola logó"></a></td>
+                <td><a href="https://dealer.porsche.com/hu/budapest/hu-HU?gad_source=1&gclid=CjwKCAiA9IC6BhA3EiwAsbltOJM3f22wMWgz107eSFMQ7UsPc1IAgQ6ssxM-SQwxkQzYlctFe7gh1hoCgXgQAvD_BwE&gclsrc=aw.ds"
+                        target="_blank"><img src="./logok/porsche.jpg" alt="porsche logó"></a></td>
+            </tr>
+            <tr>
+                <td colspan="2"><a href="https://www.nivea.hu" target="_blank"><img
+                            src="./logok/niveamen.png" alt="nivea men logó"></a></td>
+                <td colspan="2"><a href="https://open.spotify.com/" target="_blank"><img
+                            src="./logok/spotify.png" alt="spotify logó"></a></td>
+            </tr>
+        </table>
+    </div>
+    <hr>
+    <div class="footer">
+        <img src="./logok/Grinnax_Boltor.png" alt="grinnar boltor logó">
+        <p>A csapat kitalált, nem reprezentálja a valóságot<br>
+            &copy; Fejérdy Samu 2024 Corvinus</p>
+        <img src="./logok/adidas.png" alt="adidas logó">
+    </div>
+    <script src="jquery-3.7.1.js"></script>
+    <script src="slick-1.8.1/slick/slick.js"></script>
+    <script src="javascript.js"></script>
+    <script src="validate/dist/jquery.validate.min.js"></script>
+    <script>
+        $(document).ready(function(){
+        $("#vasarlasform").validate({
+            rules: {
+                nev: "required",
+                email: {
+                required: true,
+                email: true
+                },
+                jelszo: {
+                required: true,
+                minlength: 8
+                },
+			    checkbox: {
+                required: true,
+                },
+                telszam: {
+                    required:true,
+                },
+                rad: {
+                    required:true,
+                },
+                hsz:{
+                    required: true,
+                },
+                kozter:{
+                    required: true,
+                },
+                irszam:{
+                    required: true,
+                },
+                varos:{
+                    required: true,
+                },
+            },
+    messages: {
+     nev: "Kérem töltse ki a Név mezőt.",
+     telszam: " Kérem adja meg a telefonszámát.",
+     jelszo: {
+      required: " Kérem adja meg a jelszavát.",
+      minlength: " A jelszava legalább 8 karakter hosszú legyen."
+     },
+     email: " Kérem adjon meg létező email címet.",
+        checkbox: " Kérem fogadja el a feltételeinket.",
+        rad:"<-- Kérem adja meg a válaszát -->",
+        hsz:" Kérem töltse ki ezt a mezőt.",
+        varos:" Kérem töltse ki ezt a mezőt.",
+        irszam:" Kérem töltse ki ezt a mezőt.",
+        kozter:" Kérem töltse ki ezt a mezőt.",
+    },
+   });
+});
+        </script>
+    <script>
+        $(document).ready(function () {
+            $(".center").slick({
+                dots: true,
+                infinite: true,
+                centerMode: true,
+                centerPadding: '0',
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 8000,
+                responsive: [
+                    {
+                        breakpoint: 900,
+                        settings: {
+                            arrows: false,
+                            centerPadding: '0',
+                            slidesToShow: 1
+                        }
+                    },
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            arrows: false,
+                            centerPadding: '0',
+                            slidesToShow: 1
+                        }
+                    },
+                    {
+                        breakpoint: 600,
+                        settings: {
+                            arrows: false,
+                            centerPadding: '0',
+                            slidesToShow: 1
+                        }
+                    }
+                ]
+            });
+        });
+    </script>
+
+</body>
+
+</html>

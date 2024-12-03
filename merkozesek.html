@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Fejérdy Samu">
+    <meta name="description" content="Grinnax Boltor labdarúgás csapat oldala">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./logok/Grinnax_Boltor.png" type="image/x-icon">
+    <title>Grinnax Boltor</title>
+</head>
+<body>
+    <a id="teto"></a>
+    <div>
+        <div class="header">
+                    <a href="index.html"><img src="./logok/Grinnax_Boltor.png" alt="grinnax boltor logó"></a>
+                    <a href="index.html" class="menupont">Főoldal</a>
+                    <a href="rolunk.html" class="menupont">Rólunk</a>
+                    <a href="#" class="menupont active">Mérkőzések</a>
+                    <a href="shop.html" class="menupont">Bolt</a>
+                    <a href="https://www.adidas.com/us" target="_blank"><img src="./logok/adidas.png" alt="adidas logó" class="adidas"></a>
+        </div>
+    </div>
+    
+    <div class="felirat">
+        <h1>Mérkőzések és Statisztikák</h1>
+    </div>
+    <div class="behuzas">
+        <select name="ev" id="szezon" onchange="season()">
+            <option value="2425">2024/2025</option>
+            <option value="2324">2023/2024</option>
+        </select>
+    </div>
+    <div class="article">
+        <div class="behuzas"><h1>Tabella</h1></div>
+        <table class="aktiv" id="tabla1">
+            <tr>
+                <td></td>
+                <td>Csapat</td>
+                <td>M</td>
+                <td>Gy</td>
+                <td>D</td>
+                <td>V</td>
+                <td>LG</td>
+                <td>KG</td>
+                <td>GK</td>
+                <td>P</td>
+            </tr>
+            <tr>
+                <td>1.</td>
+                <td>Grinnax Boltor</td>
+                <td>3</td>
+                <td>3</td>
+                <td>0</td>
+                <td>0</td>
+                <td>11</td>
+                <td>2</td>
+                <td>9</td>
+                <td>9</td>
+            </tr>
+            <tr>
+                <td>2.</td>
+                <td>Zurnix Pyros</td>
+                <td>3</td>
+                <td>2</td>
+                <td>1</td>
+                <td>0</td>
+                <td>6</td>
+                <td>3</td>
+                <td>3</td>
+                <td>7</td>
+            </tr>
+            <tr>
+                <td>3.</td>
+                <td>Krelthor Vipers</td>
+                <td>2</td>
+                <td>1</td>
+                <td>1</td>
+                <td>0</td>
+                <td>7</td>
+                <td>4</td>
+                <td>3</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>4.</td>
+                <td>Varnax Titans</td>
+                <td>3</td>
+                <td>1</td>
+                <td>0</td>
+                <td>2</td>
+                <td>3</td>
+                <td>6</td>
+                <td>-3</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>5.</td>
+                <td>Jorvik Blades</td>
+                <td>3</td>
+                <td>0</td>
+                <td>0</td>
+                <td>3</td>
+                <td>2</td>
+                <td>7</td>
+                <td>-5</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>6.</td>
+                <td>Treznor Falcons</td>
+                <td>2</td>
+                <td>0</td>
+                <td>0</td>
+                <td>2</td>
+                <td>1</td>
+                <td>8</td>
+                <td>-7</td>
+                <td>0</td>
+            </tr>
+        </table>
+
+        <table id="tabla2">
+            <tr>
+                <td></td>
+                <td>Csapat</td>
+                <td>M</td>
+                <td>Gy</td>
+                <td>D</td>
+                <td>V</td>
+                <td>LG</td>
+                <td>KG</td>
+                <td>GK</td>
+                <td>P</td>
+            </tr>
+            <tr>
+                <td>1.</td>
+                <td>Grinnax Boltor</td>
+                <td>5</td>
+                <td>3</td>
+                <td>1</td>
+                <td>1</td>
+                <td>19</td>
+                <td>17</td>
+                <td>2</td>
+                <td>10</td>
+            </tr>
+            <tr>
+                <td>2.</td>
+                <td>Krelthor Vipers</td>
+                <td>5</td>
+                <td>2</td>
+                <td>3</td>
+                <td>0</td>
+                <td>11</td>
+                <td>7</td>
+                <td>4</td>
+                <td>9</td>
+            </tr>
+            <tr>
+                <td>3.</td>
+                <td>Zurnix Pyros</td>
+                <td>5</td>
+                <td>3</td>
+                <td>0</td>
+                <td>2</td>
+                <td>20</td>
+                <td>17</td>
+                <td>3</td>
+                <td>9</td>
+            </tr>
+            <tr>
+                <td>4.</td>
+                <td>Treznor Falcons</td>
+                <td>5</td>
+                <td>3</td>
+                <td>0</td>
+                <td>2</td>
+                <td>13</td>
+                <td>10</td>
+                <td>3</td>
+                <td>9</td>
+            </tr>
+            <tr>
+                <td>5.</td>
+                <td>Jorvik Blades</td>
+                <td>5</td>
+                <td>1</td>
+                <td>1</td>
+                <td>3</td>
+                <td>10</td>
+                <td>15</td>
+                <td>-5</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>6.</td>
+                <td>Varnax Titans</td>
+                <td>5</td>
+                <td>0</td>
+                <td>1</td>
+                <td>4</td>
+                <td>13</td>
+                <td>20</td>
+                <td>-7</td>
+                <td>1</td>
+            </tr>
+        </table>
+    </div>
+    <div class="behuzas">
+        <h1>Eredmények</h1>
+    </div>
+    <div class="article">
+        <table id="table1" class="aktiv">
+            <tr>
+                <td>Dátum</td>
+                <td>Forduló</td>
+                <td>Helyszín</td>
+                <td>Hazai-Vendég</td>
+                <td>Eredmény</td>
+            </tr>
+            <tr>
+                <td>2024.09.13. 18:00</td>
+                <td>I.osztály <span class="normal">1. forduló</span></td>
+                <td>Grinnax Aréna</td>
+                <td>Grinnax Boltor-Treznor Falcons</td>
+                <td>4:0</td>
+            </tr>
+            <tr>
+                <td>2024.10.19. 14:00</td>
+                <td>I.osztály <span class="normal">2. forduló</span></td>
+                <td>Jorvik Aréna</td>
+                <td>Jorvik Blades-Grinnax Boltor</td>
+                <td>1:4</td>
+            </tr>
+            <tr>
+                <td>2024.11.07. 19:00</td>
+                <td>I.osztály <span class="normal">3. forduló</span></td>
+                <td>Grinnax Aréna</td>
+                <td>Grinnax Boltor-Varnax Titans</td>
+                <td>3:1</td>
+            </tr>
+        </table>
+        <table id="table2">
+            <tr>
+                <td>Dátum</td>
+                <td>Forduló</td>
+                <td>Helyszín</td>
+                <td>Hazai-Vendég</td>
+                <td>Eredmény</td>
+            </tr>
+            <tr>
+                <td>2023.09.18. 18:00</td>
+                <td>I.osztály <span class="normal">1. forduló</span></td>
+                <td>Zurnix Aréna</td>
+                <td>Zurnix Pyros-Grinnax Boltor</td>
+                <td>1:3</td>
+            </tr>
+            <tr>
+                <td>2023.10.09. 16:00</td>
+                <td>I.osztály <span class="normal">2. forduló</span></td>
+                <td>Grinnax Aréna</td>
+                <td>Grinnax Boltor-Krelthol Vipers</td>
+                <td>1:7</td>
+            </tr>
+            <tr>
+                <td>2023.11.15. 17:00</td>
+                <td>I.osztály <span class="normal">3. forduló</span></td>
+                <td>Grinnax Aréna</td>
+                <td>Grinnax Boltor-Jorvik Blades</td>
+                <td>5:4</td>
+            </tr>
+            <tr>
+                <td>2024.02.16. 11:00</td>
+                <td>I.osztály <span class="normal">4. forduló</span></td>
+                <td>Treznor Aréna</td>
+                <td>Treznor Falcons-Grinnax Boltor</td>
+                <td>1:1</td>
+            </tr>
+            <tr>
+                <td>2024.04.01. 20:00</td>
+                <td>I.osztály <span class="normal">5. forduló</span></td>
+                <td>Varnax Aréna</td>
+                <td>Varnax Titans-Grinnax Boltor</td>
+                <td>4:9</td>
+            </tr>
+        </table>
+    </div>
+    <div class="behuzas">
+        <h1>Házi gollővő lista</h1>
+    </div>
+    <div class="article">
+        <table class="aktiv" id="gollovo1">
+            <tr>
+                <td>Játékos</td>
+                <td>Mérkőzések</td>
+                <td>Gólok száma</td>
+                <td>Gólpasszok száma</td>
+            </tr>
+            <tr>
+                <td>Arlen Varnor</td>
+                <td>3</td>
+                <td>6</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>Miklos Tarran</td>
+                <td>3</td>
+                <td>2</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>Riven Caltris</td>
+                <td>3</td>
+                <td>2</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>Tyron Velkas</td>
+                <td>2</td>
+                <td>1</td>
+                <td>3</td>
+            </tr>
+        </table>
+        <table id="gollovo2">
+            <tr>
+                <td>Játékos</td>
+                <td>Mérkőzések</td>
+                <td>Gólok száma</td>
+                <td>Gólpasszok száma</td>
+            </tr>
+            <tr>
+                <td>Arlen Varnor</td>
+                <td>5</td>
+                <td>10</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>Kelan Dravos</td>
+                <td>5</td>
+                <td>3</td>
+                <td>7</td>
+            </tr>
+            <tr>
+                <td>Erian solvek</td>
+                <td>5</td>
+                <td>3</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td>Laziel Korvin</td>
+                <td>5</td>
+                <td>3</td>
+                <td>4</td>
+            </tr>
+        </table>
+    </div>
+    <div class="behuzas"><a href="#teto">Vissza a tetejére</a></div>
+    <hr class="valaszto">
+    <div class="szponzorok">
+        <table>
+            <tr>
+                <td colspan="2"><a href="https://www.adidas.com/us" target="_blank"><img
+                            src="./logok/adidas.png" alt="adidas logó"></a></td>
+                <td colspan="2"><a href="https://www.hp.com/hu-hu/home.html" target="_blank"><img
+                            src="./logok/hp.png" alt="hp logó"></a></td>
+            </tr>
+            <tr>
+                <td><a href="https://www.ea.com/sports" target="_blank"><img src="./logok/easports.jpg"
+                            alt="ea sports logó"></a></td>
+                <td colspan="2"><a href="https://www.coca-cola.com/hu/hu" target="_blank"><img
+                            src="./logok/cocacola.png" alt="coca cola logó"></a></td>
+                <td><a href="https://dealer.porsche.com/hu/budapest/hu-HU?gad_source=1&gclid=CjwKCAiA9IC6BhA3EiwAsbltOJM3f22wMWgz107eSFMQ7UsPc1IAgQ6ssxM-SQwxkQzYlctFe7gh1hoCgXgQAvD_BwE&gclsrc=aw.ds"
+                        target="_blank"><img src="./logok/porsche.jpg" alt="porsche logó"></a></td>
+            </tr>
+            <tr>
+                <td colspan="2"><a href="https://www.nivea.hu" target="_blank"><img
+                            src="./logok/niveamen.png" alt="nivea men logó"></a></td>
+                <td colspan="2"><a href="https://open.spotify.com/" target="_blank"><img
+                            src="./logok/spotify.png" alt="spotify logó"></a></td>
+            </tr>
+        </table>
+    </div>
+    <hr>
+    <div class="footer">
+        <img src="./logok/Grinnax_Boltor.png" alt="grinnar boltor logó">
+        <p>A csapat kitalált, nem reprezentálja a valóságot<br>
+            &copy; Fejérdy Samu 2024 Corvinus</p>
+        <img src="./logok/adidas.png" alt="adidas logó">
+    </div>
+    <script src="javascript.js"></script>
+</body>
+</html>
